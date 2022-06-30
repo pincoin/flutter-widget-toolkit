@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import './button_layout_column.dart';
 import './buttons.dart';
 import './icon_text_buttons.dart';
 import './right_icon_text_buttons.dart';
@@ -11,38 +12,33 @@ class ButtonList extends StatelessWidget {
     {
       'name': 'Buttons',
       'icon': Icons.touch_app,
-      'subtitle': '',
       'target': const Buttons(),
     },
     {
       'name': 'Icon Text Buttons',
       'icon': Icons.touch_app,
-      'subtitle': '',
       'target': const IconTextButtons(),
     },
     {
       'name': 'Right Icon Text Buttons',
       'icon': Icons.touch_app,
-      'subtitle': '',
       'target': const RightIconTextButtons(),
     },
     {
       'name': 'Floating Action Buttons',
       'icon': Icons.touch_app,
-      'subtitle': '',
       'target': const Buttons(),
     },
     {
       'name': 'Clip Buttons',
       'icon': Icons.touch_app,
-      'subtitle': '',
       'target': const Buttons(),
     },
     {
-      'name': 'Button Layouts',
+      'name': 'Button Layout 1',
       'icon': Icons.touch_app,
-      'subtitle': '',
-      'target': const Buttons(),
+      'subtitle': 'Same Width in a Column',
+      'target': const ButtonLayoutColumn(),
     },
   ];
 
@@ -63,18 +59,31 @@ class ButtonList extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
             child: Card(
-              child: ListTile(
-                leading: Icon(item['icon']),
-                title: Text(item['name']),
-                subtitle: Text(item['subtitle']),
-                trailing: const Icon(Icons.arrow_forward),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => item['target']),
-                  );
-                },
-              ),
+              child: item['subtitle'] == null
+                  ? ListTile(
+                      leading: Icon(item['icon']),
+                      title: Text(item['name']),
+                      trailing: const Icon(Icons.arrow_forward),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => item['target']),
+                        );
+                      })
+                  : ListTile(
+                      leading: Icon(item['icon']),
+                      title: Text(item['name']),
+                      subtitle: Text(item['subtitle']),
+                      trailing: const Icon(Icons.arrow_forward),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => item['target']),
+                        );
+                      },
+                    ),
             ),
           );
         }).toList(),
