@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import './buttons.dart';
+import './icon_text_buttons.dart';
+import './right_icon_text_buttons.dart';
 
 class ButtonList extends StatelessWidget {
   ButtonList({Key? key}) : super(key: key);
@@ -13,10 +15,16 @@ class ButtonList extends StatelessWidget {
       'target': const Buttons(),
     },
     {
-      'name': 'Icon Buttons',
+      'name': 'Icon Text Buttons',
       'icon': Icons.touch_app,
       'subtitle': '',
-      'target': const Buttons(),
+      'target': const IconTextButtons(),
+    },
+    {
+      'name': 'Right Icon Text Buttons',
+      'icon': Icons.touch_app,
+      'subtitle': '',
+      'target': const RightIconTextButtons(),
     },
     {
       'name': 'Floating Action Buttons',
@@ -42,7 +50,7 @@ class ButtonList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Button List'),
+        title: const Text('Icon Text Buttons'),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
