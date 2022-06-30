@@ -1,45 +1,40 @@
 import 'package:flutter/material.dart';
 
-import './widget_list/buttons/button_list.dart';
+import './buttons.dart';
 
-class WidgetList extends StatelessWidget {
-  WidgetList({Key? key}) : super(key: key);
+class ButtonList extends StatelessWidget {
+  ButtonList({Key? key}) : super(key: key);
 
-  final List<Map<String, dynamic>> _widgets = [
-    {
-      'name': 'App Structure',
-      'icon': Icons.web,
-      'target': ButtonList(),
-    },
+  final List<Map<String, dynamic>> _screens = [
     {
       'name': 'Buttons',
       'icon': Icons.touch_app,
-      'target': ButtonList(),
+      'subtitle': '',
+      'target': const Buttons(),
     },
     {
-      'name': 'Forms',
-      'icon': Icons.keyboard,
-      'target': ButtonList(),
+      'name': 'Icon Buttons',
+      'icon': Icons.touch_app,
+      'subtitle': '',
+      'target': const Buttons(),
     },
     {
-      'name': 'Dialogs, Alerts and Panels',
-      'icon': Icons.warning_amber,
-      'target': ButtonList(),
+      'name': 'Floating Action Buttons',
+      'icon': Icons.touch_app,
+      'subtitle': '',
+      'target': const Buttons(),
     },
     {
-      'name': 'Information Display',
-      'icon': Icons.info,
-      'target': ButtonList(),
+      'name': 'Clip Buttons',
+      'icon': Icons.touch_app,
+      'subtitle': '',
+      'target': const Buttons(),
     },
     {
-      'name': 'Layout',
-      'icon': Icons.dashboard_customize,
-      'target': ButtonList(),
-    },
-    {
-      'name': 'Miscellaneous',
-      'icon': Icons.discount,
-      'target': ButtonList(),
+      'name': 'Button Layouts',
+      'icon': Icons.touch_app,
+      'subtitle': '',
+      'target': const Buttons(),
     },
   ];
 
@@ -47,7 +42,7 @@ class WidgetList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Widget List'),
+        title: const Text('Button List'),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
@@ -56,13 +51,14 @@ class WidgetList extends StatelessWidget {
         ],
       ),
       body: ListView(
-        children: _widgets.map((item) {
+        children: _screens.map((item) {
           return Padding(
             padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
             child: Card(
               child: ListTile(
-                leading: Icon(item['icon'] as IconData),
+                leading: Icon(item['icon']),
                 title: Text(item['name']),
+                subtitle: Text(item['subtitle']),
                 trailing: const Icon(Icons.arrow_forward),
                 onTap: () {
                   Navigator.push(

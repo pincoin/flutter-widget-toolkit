@@ -15,30 +15,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.yellow,
       ),
-      home: MyHomePage(title: 'Flutter Widget Toolkit'),
+      home: const MyHomePage(title: 'Flutter Widget Toolkit'),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
-  MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
-
-  final List<Map<String, dynamic>> _screens = [
-    {
-      'name': 'App Structure',
-      'icon': Icons.web,
-    },
-    {
-      'name': 'Buttons',
-      'icon': Icons.touch_app,
-    },
-    {
-      'name': 'Forms',
-      'icon': Icons.keyboard,
-    },
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -59,6 +44,7 @@ class MyHomePage extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
             child: Card(
               child: ListTile(
+                contentPadding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
                 leading: const Icon(Icons.widgets),
                 title: const Text('Widgets'),
                 subtitle: const Text('UI components for reuse'),

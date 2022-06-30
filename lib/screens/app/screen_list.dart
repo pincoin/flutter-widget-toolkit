@@ -39,21 +39,19 @@ class ScreenList extends StatelessWidget {
         ],
       ),
       body: ListView(
-        children: [
-          ..._screens.map((item) {
-            return Padding(
-              padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
-              child: Card(
-                child: ListTile(
-                  leading: Icon(item['icon']),
-                  title: Text(item['name']),
-                  trailing: const Icon(Icons.arrow_forward),
-                  onTap: () {},
-                ),
+        children: _screens.map((item) {
+          return Padding(
+            padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+            child: Card(
+              child: ListTile(
+                leading: Icon(item['icon']),
+                title: Text(item['name']),
+                trailing: const Icon(Icons.arrow_forward),
+                onTap: () {},
               ),
-            );
-          }).toList(),
-        ],
+            ),
+          );
+        }).toList(),
       ),
     );
   }
