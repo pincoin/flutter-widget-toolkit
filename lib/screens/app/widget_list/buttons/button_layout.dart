@@ -75,7 +75,7 @@ class ButtonLayout extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(8, 0, 4, 0),
                       child: ElevatedButton(
-                        child: const Text('Evenly in exapnded'),
+                        child: const Text('One Expanded'),
                         onPressed: () {},
                       ),
                     ),
@@ -84,7 +84,7 @@ class ButtonLayout extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(4, 0, 8, 0),
                       child: ElevatedButton(
-                        child: const Text('Long Button'),
+                        child: const Text('Two Evenly'),
                         onPressed: () {},
                       ),
                     ),
@@ -161,6 +161,41 @@ class ButtonLayout extends StatelessWidget {
                     ),
                   ),
                 ],
+              ),
+              IntrinsicWidth(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(8, 0, 4, 0),
+                        child: ElevatedButton(
+                          child: const Text('Intrinsic'),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(4, 0, 4, 0),
+                        child: ElevatedButton(
+                          child: const Text('Row Center'),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(4, 0, 8, 0),
+                        child: ElevatedButton(
+                          child: const Text('Expanded'),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
