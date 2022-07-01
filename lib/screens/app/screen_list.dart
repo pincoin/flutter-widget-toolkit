@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './screen_list/modu/example01.dart';
+
 class ScreenList extends StatelessWidget {
   ScreenList({Key? key}) : super(key: key);
 
@@ -7,22 +9,37 @@ class ScreenList extends StatelessWidget {
     {
       'name': 'Sign In',
       'icon': Icons.login,
+      'target': const Example01(),
     },
     {
       'name': 'Sign Out',
       'icon': Icons.logout,
+      'target': const Example01(),
     },
     {
       'name': 'Sign Up',
       'icon': Icons.person_add,
+      'target': const Example01(),
     },
     {
       'name': 'Dashboard',
       'icon': Icons.dashboard,
+      'target': const Example01(),
     },
     {
       'name': 'Settings',
       'icon': Icons.settings_applications,
+      'target': const Example01(),
+    },
+    {
+      'name': 'Misc',
+      'icon': Icons.desk,
+      'target': const Example01(),
+    },
+    {
+      'name': 'Modu',
+      'icon': Icons.text_snippet,
+      'target': const Example01(),
     },
   ];
 
@@ -47,7 +64,12 @@ class ScreenList extends StatelessWidget {
                 leading: Icon(item['icon']),
                 title: Text(item['name']),
                 trailing: const Icon(Icons.arrow_forward),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => item['target']),
+                  );
+                },
               ),
             ),
           );
