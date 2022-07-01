@@ -37,7 +37,6 @@ class ButtonList extends StatelessWidget {
     {
       'name': 'Button Layout',
       'icon': Icons.touch_app,
-      'subtitle': 'Column + Row',
       'target': const ButtonLayout(),
     },
   ];

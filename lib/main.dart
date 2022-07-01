@@ -45,7 +45,6 @@ class MyHomePage extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
             child: Card(
               child: ListTile(
-                contentPadding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
                 leading: const Icon(Icons.widgets),
                 title: const Text('Widgets'),
                 subtitle: const Text('UI components for reuse'),
