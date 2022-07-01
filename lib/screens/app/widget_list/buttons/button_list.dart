@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './one_column_evenly.dart';
-import './one_column_fill.dart';
-import './one_column_fit.dart';
+import './button_layout.dart';
 import './buttons.dart';
 import './icon_text_buttons.dart';
 import './right_icon_text_buttons.dart';
@@ -37,22 +35,10 @@ class ButtonList extends StatelessWidget {
       'target': const Buttons(),
     },
     {
-      'name': 'Button Layout 1',
+      'name': 'Button Layout',
       'icon': Icons.touch_app,
-      'subtitle': 'Evenly in a Column',
-      'target': const OneColumnEvenly(),
-    },
-    {
-      'name': 'Button Layout 2',
-      'icon': Icons.touch_app,
-      'subtitle': 'Fit in a Column',
-      'target': const OneColumnFit(),
-    },
-    {
-      'name': 'Button Layout 3',
-      'icon': Icons.touch_app,
-      'subtitle': 'Fill in a Column',
-      'target': const OneColumnFill(),
+      'subtitle': 'Column + Row',
+      'target': const ButtonLayout(),
     },
   ];
 
