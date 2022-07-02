@@ -305,33 +305,6 @@ class ButtonLayout extends StatelessWidget {
                 ],
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(180, 36),
-                    ),
-                    child: const Text('Fixed Size Button'),
-                    onPressed: () {},
-                  ),
-                  const SizedBox(
-                    height: 24, // height constraints required
-                    child: VerticalDivider(
-                      thickness: 1,
-                      width: 1,
-                      color: Colors.black26,
-                    ),
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      minimumSize: const Size(180, 36),
-                    ),
-                    child: const Text('180 x 36'),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
