@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Example02 extends StatelessWidget {
   const Example02({Key? key}) : super(key: key);
@@ -27,11 +28,16 @@ class Example02 extends StatelessWidget {
       body: SafeArea(
         child: ListView(
           children: [
-            const Padding(
-              padding: EdgeInsets.fromLTRB(12, 8, 12, 0),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(12, 8, 12, 0),
               child: Text(
                 'Recipes',
-                style: TextStyle(fontSize: 36),
+                style: GoogleFonts.patuaOne(
+                  textStyle: const TextStyle(
+                    fontSize: 36,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ),
             Row(
@@ -106,9 +112,11 @@ class Example02 extends StatelessWidget {
                     const SizedBox(height: 10),
                     Text(
                       item['title'] as String,
-                      style: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                      style: GoogleFonts.patuaOne(
+                        textStyle: const TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                     Text(
