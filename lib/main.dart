@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import './screens/app/mystagram/root_page.dart';
 import './screens/app/screen_list.dart';
 import './screens/app/widget_list.dart';
 
@@ -70,6 +71,24 @@ class MyHomePage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => ScreenList()),
+                  );
+                },
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(8, 8, 8, 0),
+            child: Card(
+              child: ListTile(
+                leading: const Icon(Icons.stars),
+                title: const Text('MyStagram'),
+                subtitle: const Text('Sample App'),
+                trailing: const Icon(Icons.arrow_forward),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => MyStagramRootPage()),
                   );
                 },
               ),

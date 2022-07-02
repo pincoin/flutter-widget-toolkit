@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './widget_list/buttons/button_list.dart';
+import './widget_list/layout/layout_list.dart';
 
 class WidgetList extends StatelessWidget {
   WidgetList({Key? key}) : super(key: key);
@@ -34,7 +35,7 @@ class WidgetList extends StatelessWidget {
     {
       'name': 'Layout',
       'icon': Icons.dashboard_customize,
-      'target': ButtonList(),
+      'target': LayoutList(),
     },
     {
       'name': 'Miscellaneous',
