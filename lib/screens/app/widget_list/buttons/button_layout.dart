@@ -212,17 +212,50 @@ class ButtonLayout extends StatelessWidget {
                   ],
                 ),
               ),
+              IntrinsicWidth(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(8, 0, 4, 0),
+                        child: ElevatedButton(
+                          child: const Text('Intrinsic Width'),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 24, // height constraints required
+                      child: VerticalDivider(
+                        thickness: 1,
+                        width: 20,
+                        color: Colors.black26,
+                      ),
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(4, 0, 8, 0),
+                        child: ElevatedButton(
+                          child: const Text('Expanded'),
+                          onPressed: () {},
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     ElevatedButton(
-                      child: const Text('Button Space Between'),
+                      child: const Text('Space'),
                       onPressed: () {},
                     ),
                     ElevatedButton(
-                      child: const Text('Long Button'),
+                      child: const Text('Between'),
                       onPressed: () {},
                     ),
                   ],
@@ -232,11 +265,11 @@ class ButtonLayout extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   ElevatedButton(
-                    child: const Text('Button Space Around'),
+                    child: const Text('Space'),
                     onPressed: () {},
                   ),
                   ElevatedButton(
-                    child: const Text('Long Button'),
+                    child: const Text('Around'),
                     onPressed: () {},
                   ),
                 ],
@@ -245,11 +278,11 @@ class ButtonLayout extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
-                    child: const Text('Button Space Evenly'),
+                    child: const Text('Space'),
                     onPressed: () {},
                   ),
                   ElevatedButton(
-                    child: const Text('Long Button'),
+                    child: const Text('Evenly'),
                     onPressed: () {},
                   ),
                 ],
