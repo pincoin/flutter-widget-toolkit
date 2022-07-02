@@ -112,6 +112,36 @@ class ButtonLayout extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(8, 0, 4, 0),
                       child: ElevatedButton(
+                        child: const Text('One Expanded'),
+                        onPressed: () {},
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 24, // height constraints required
+                    child: VerticalDivider(
+                      thickness: 1,
+                      width: 24,
+                      color: Colors.black26,
+                    ),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(4, 0, 8, 0),
+                      child: ElevatedButton(
+                        child: const Text('Two Evenly'),
+                        onPressed: () {},
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(8, 0, 4, 0),
+                      child: ElevatedButton(
                         child: const Text('One'),
                         onPressed: () {},
                       ),
@@ -229,7 +259,7 @@ class ButtonLayout extends StatelessWidget {
                       height: 24, // height constraints required
                       child: VerticalDivider(
                         thickness: 1,
-                        width: 20,
+                        width: 24,
                         color: Colors.black26,
                       ),
                     ),
@@ -270,6 +300,33 @@ class ButtonLayout extends StatelessWidget {
                   ),
                   ElevatedButton(
                     child: const Text('Around'),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(180, 36),
+                    ),
+                    child: const Text('Fixed Size Button'),
+                    onPressed: () {},
+                  ),
+                  const SizedBox(
+                    height: 24, // height constraints required
+                    child: VerticalDivider(
+                      thickness: 1,
+                      width: 1,
+                      color: Colors.black26,
+                    ),
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      minimumSize: const Size(180, 36),
+                    ),
+                    child: const Text('180 x 36'),
                     onPressed: () {},
                   ),
                 ],
