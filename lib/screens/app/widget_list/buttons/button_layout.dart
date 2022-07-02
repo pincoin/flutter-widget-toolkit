@@ -70,7 +70,7 @@ class ButtonLayout extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     ElevatedButton(
-                      child: const Text('Button'),
+                      child: const Text('Intrinsic Button'),
                       onPressed: () {},
                     ),
                     ElevatedButton(
