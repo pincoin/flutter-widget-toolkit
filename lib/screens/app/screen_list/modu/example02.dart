@@ -89,10 +89,7 @@ class Example02 extends StatelessWidget {
               },
             ].map((item) {
               return Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 12.0,
-                  vertical: 20,
-                ),
+                padding: const EdgeInsets.all(12),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
