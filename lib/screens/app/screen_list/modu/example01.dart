@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class Example01 extends StatelessWidget {
   const Example01({Key? key}) : super(key: key);
@@ -41,19 +39,19 @@ class Example01 extends StatelessWidget {
               ),
             ),
             Expanded(
+              flex: 2,
               child: Image.network(
                 'https://picsum.photos/1489/838',
                 fit: BoxFit.cover,
               ),
-              flex: 2,
             ),
             const SizedBox(height: 2),
             Expanded(
+              flex: 1,
               child: Image.network(
                 'https://picsum.photos/1489/838',
                 fit: BoxFit.cover,
               ),
-              flex: 1,
             ),
           ],
         ),

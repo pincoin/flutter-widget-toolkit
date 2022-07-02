@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './screen_list/modu/example01.dart';
+import './screen_list/modu/example_list.dart';
 
 class ScreenList extends StatelessWidget {
   ScreenList({Key? key}) : super(key: key);
@@ -9,37 +9,37 @@ class ScreenList extends StatelessWidget {
     {
       'name': 'Sign In',
       'icon': Icons.login,
-      'target': const Example01(),
+      'target': ModuExampleList(),
     },
     {
       'name': 'Sign Out',
       'icon': Icons.logout,
-      'target': const Example01(),
+      'target': ModuExampleList(),
     },
     {
       'name': 'Sign Up',
       'icon': Icons.person_add,
-      'target': const Example01(),
+      'target': ModuExampleList(),
     },
     {
       'name': 'Dashboard',
       'icon': Icons.dashboard,
-      'target': const Example01(),
+      'target': ModuExampleList(),
     },
     {
       'name': 'Settings',
       'icon': Icons.settings_applications,
-      'target': const Example01(),
+      'target': ModuExampleList(),
     },
     {
       'name': 'Misc',
       'icon': Icons.desk,
-      'target': const Example01(),
+      'target': ModuExampleList(),
     },
     {
       'name': 'Modu',
       'icon': Icons.text_snippet,
-      'target': const Example01(),
+      'target': ModuExampleList(),
     },
   ];
 
