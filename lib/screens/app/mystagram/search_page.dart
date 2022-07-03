@@ -5,6 +5,21 @@ class SearchPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SafeArea(
+      child: GridView.builder(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            childAspectRatio: 1.0,
+            mainAxisSpacing: 1.0,
+            crossAxisSpacing: 1.0),
+        itemCount: 5,
+        itemBuilder: (context, index) {
+          return Image.network(
+            'https://picsum.photos/1024/768',
+            fit: BoxFit.cover,
+          );
+        },
+      ),
+    );
   }
 }
