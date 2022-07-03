@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './account_page.dart';
+import './create_page.dart';
 import './home_page.dart';
 import './search_page.dart';
 
@@ -23,13 +24,12 @@ class _TabPageState extends State<TabPage> {
   final _appBars = [
     AppBar(
       title: const Text('MyStagram Clone'),
-      leading: null,
     ),
-    AppBar(),
+    null,
     AppBar(
       actions: [
         IconButton(
-          icon: Icon(Icons.exit_to_app),
+          icon: const Icon(Icons.exit_to_app),
           onPressed: () {},
         )
       ],
@@ -43,6 +43,7 @@ class _TabPageState extends State<TabPage> {
       body: SafeArea(
         child: _pages[_selectedIndex],
       ),
+      floatingActionButton: _buildFloatingActionButton(context, _selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         fixedColor: Colors.pinkAccent,
         currentIndex: _selectedIndex,
@@ -67,5 +68,23 @@ class _TabPageState extends State<TabPage> {
         ],
       ),
     );
+  }
+
+  Widget? _buildFloatingActionButton(context, index) {
+    final floatingActionButton = [
+      null,
+      FloatingActionButton(
+        child: const Icon(Icons.create),
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const CreatePage()),
+          );
+        },
+      ),
+      null,
+    ];
+
+    return floatingActionButton[index];
   }
 }

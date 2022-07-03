@@ -88,7 +88,7 @@ class MyHomePage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => MyStagramRootPage()),
+                        builder: (context) => const MyStagramRootPage()),
                   );
                 },
               ),
