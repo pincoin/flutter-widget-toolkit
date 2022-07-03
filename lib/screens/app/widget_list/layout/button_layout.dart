@@ -77,6 +77,16 @@ class ButtonLayout extends StatelessWidget {
                   ),
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    minimumSize: const Size.fromHeight(36),
+                  ),
+                  onPressed: () {},
+                  child: const Text('ElevatedButton.styleFrom:minimumSize'),
+                ),
+              ),
               IntrinsicWidth(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
