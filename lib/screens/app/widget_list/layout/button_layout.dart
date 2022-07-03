@@ -57,10 +57,22 @@ class ButtonLayout extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    ElevatedButton(
+                      child: const Text('CrossAxisAlignment.stretch'),
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                    child: const Text('Full width'),
+                    child: const Text('SizedBox.width: double.infinity'),
                     onPressed: () {},
                   ),
                 ),
