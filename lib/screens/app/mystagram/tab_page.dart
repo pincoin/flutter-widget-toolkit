@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import './account_page.dart';
 import './home_page.dart';
+import './search_page.dart';
 
 class TabPage extends StatefulWidget {
   const TabPage({Key? key}) : super(key: key);
@@ -12,22 +14,25 @@ class TabPage extends StatefulWidget {
 class _TabPageState extends State<TabPage> {
   var _selectedIndex = 0;
 
-  var _pages = [
+  final _pages = const [
     HomePage(),
-    Text('page 1'),
-    Text('page 2'),
+    SearchPage(),
+    AccountPage(),
   ];
 
-  var _appBars = [
+  final _appBars = [
     AppBar(
-      title: Text('MyStagram Clone'),
+      title: const Text('MyStagram Clone'),
       leading: null,
     ),
+    AppBar(),
     AppBar(
-      title: Text('SearchPage'),
-    ),
-    AppBar(
-      title: Text('AccountPage'),
+      actions: [
+        IconButton(
+          icon: Icon(Icons.exit_to_app),
+          onPressed: () {},
+        )
+      ],
     ),
   ];
 

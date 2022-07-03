@@ -37,7 +37,13 @@ class HomePage extends StatelessWidget {
                   children: [
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: CircleAvatar(),
+                      child: CircleAvatar(
+                        minRadius: 20,
+                        maxRadius: 50,
+                        backgroundImage:
+                            Image.network('https://picsum.photos/1024/768')
+                                .image,
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
@@ -80,7 +86,7 @@ class HomePage extends StatelessWidget {
                     ),
                     ElevatedButton(
                       onPressed: () {},
-                      child: Text('팔로우'),
+                      child: const Text('팔로우'),
                     )
                   ],
                 ),
