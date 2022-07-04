@@ -6,3 +6,4 @@ In this project, our goal is to use the least of stateful widgets and 3rd party 
 
 # dependencies
 * google_fonts
+* image_picker
