@@ -45,7 +45,7 @@ class _CreatePageState extends State<CreatePage> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                _image == null ? const Text('이미지 없음') : _image as Image,
+                _image ?? const Text('이미지 없음'),
                 const SizedBox(height: 12),
                 TextField(
                   decoration: const InputDecoration(
