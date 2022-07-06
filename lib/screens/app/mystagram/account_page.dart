@@ -1,7 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class AccountPage extends StatelessWidget {
-  const AccountPage({Key? key}) : super(key: key);
+  final User user;
+
+  const AccountPage(this.user, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +23,9 @@ class AccountPage extends StatelessWidget {
                     CircleAvatar(
                       minRadius: 20,
                       maxRadius: 50,
-                      backgroundImage:
-                          Image.network('https://picsum.photos/1024/768').image,
+                      backgroundImage: Image.network(
+                              user.photoURL ?? 'https://picsum.photos/1024/768')
+                          .image,
                     ),
                     Positioned(
                       bottom: 0,
@@ -41,9 +45,9 @@ class AccountPage extends StatelessWidget {
                   ]),
                   const SizedBox(height: 12),
                   Text(
-                    'supawadee netsaengsri',
+                    user.email ?? 'E-mail address',
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                     ),
